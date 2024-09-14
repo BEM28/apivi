@@ -1,5 +1,5 @@
 import 'package:apivi/constant/colors_constant.dart';
-import 'package:apivi/features/onboarding_screen/view/onboarding_screen.dart';
+import 'package:apivi/src/views/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

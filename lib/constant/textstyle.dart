@@ -14,7 +14,7 @@ class AppStyle {
     color: AppColors.greenDark,
   );
   static const TextStyle subtitle = TextStyle(
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: FontWeight.w300,
     color: AppColors.greenDark,
   );
@@ -28,6 +28,11 @@ class AppStyle {
     fontWeight: FontWeight.w300,
     color: AppColors.greenDark,
   );
+  static const TextStyle floatingtitle = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w300,
+    color: AppColors.white,
+  );
   static const TextStyle titleButton = TextStyle(
     fontSize: 28,
     fontWeight: FontWeight.w600,
@@ -36,7 +41,13 @@ class AppStyle {
 
   static const TextStyle subtitleQuiz = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w500,
+    color: AppColors.white,
+  );
+
+  static const TextStyle skorQuiz = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.bold,
     color: AppColors.white,
   );
   static const TextStyle timer = TextStyle(

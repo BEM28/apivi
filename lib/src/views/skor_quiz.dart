@@ -1,11 +1,12 @@
 import 'package:apivi/constant/colors_constant.dart';
 import 'package:apivi/constant/image_constant.dart';
 import 'package:apivi/constant/textstyle.dart';
-import 'package:apivi/features/home_screen/view/home_screen.dart';
+import 'package:apivi/src/views/home_screen.dart';
+import 'package:apivi/src/views/quiz_game.dart';
 import 'package:flutter/material.dart';
 
-class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+class SkorQuiz extends StatelessWidget {
+  const SkorQuiz({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +20,30 @@ class OnboardingScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Image.asset(AppImage.virus),
+                Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Image.asset(AppImage.skor),
+                    ),
+                    const Positioned(
+                      left: 0,
+                      right: 0,
+                      top: 0,
+                      bottom: 0,
+                      child: Center(
+                        child: Text(
+                          "100",
+                          textAlign: TextAlign.center,
+                          style: AppStyle.skorQuiz,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 30),
-                const Text("APIVI", style: AppStyle.title),
-                const Text(
-                    "Media Pembeljaran untuk menambah pemahaman tentang virus",
-                    textAlign: TextAlign.center,
-                    style: AppStyle.subtitle),
+                const Text("Selamar Anda Berhasil Menjawab Semua Soal",
+                    textAlign: TextAlign.center, style: AppStyle.subtitle),
                 const SizedBox(height: 30),
                 SizedBox(
                   width: double.infinity,
@@ -41,8 +56,8 @@ class OnboardingScreen extends StatelessWidget {
                         backgroundColor: AppColors.primary,
                         padding: const EdgeInsets.symmetric(vertical: 3),
                       ),
-                      child:
-                          const Text("Ayo Mulai", style: AppStyle.titleButton)),
+                      child: const Text("Buka Materi",
+                          style: AppStyle.titleButton)),
                 )
               ],
             ),
